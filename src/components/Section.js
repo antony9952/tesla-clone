@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Zoom';
 
 function Section({title,description,leftBtnText,rightBtnText,backgroundImg}) {
     return (
@@ -9,6 +10,7 @@ function Section({title,description,leftBtnText,rightBtnText,backgroundImg}) {
                 <p>{description}</p>
             </ItemText>
             <Button>
+            <Fade bottom>
             <ButtonGroup>
                 <LeftButton>
                     {leftBtnText}
@@ -19,6 +21,7 @@ function Section({title,description,leftBtnText,rightBtnText,backgroundImg}) {
                 </RightButton>
                 }
             </ButtonGroup>
+            </Fade>
             <DownArrow src = "images/down-arrow.svg"/>
             </Button>
         </Wrap>
